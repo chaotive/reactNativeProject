@@ -11,7 +11,10 @@
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "test": "node node_modules/jest/bin/jest.js --watch"
+    "test": "node node_modules/jest/bin/jest.js --watch",
+    "clean": "npm run clean-android && npm run clean-ios",
+    "clean-android": "cd android && rm -rf build && rm -rf app/build && ./gradlew clean",
+    "clean-ios": "cd ios && rm -rf build"
   },
   "jest": {
     "preset": "jest-expo"
